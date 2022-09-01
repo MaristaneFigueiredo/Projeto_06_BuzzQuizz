@@ -14,26 +14,49 @@
     </header>
 
     <div class="container">
+
+        <!-- <div> <button class="botao1" onclick="chamarTela1()">chamarTela1 </button></div>
+        <div> <button class="botao2" onclick="chamarTela2()">chamarTela1 </button></div>
+        <div> <button class="botao3" onclick="chamarTela3()">chamarTela1 </button></div> -->
+       
         
         <div class="tela1">
-            <div class="criar-quiz">
-                Você não criou nenhum quizz ainda :(
-                <div> <button class="btn-criar-quiz" onclick="chamarTela3()">Criar Quiz</button></div>
+            <div class="area-criar-quizz">
+                <p>Você não criou nenhum quizz ainda :(</p>
+                
+                <div class="posicao-btn-criar-quizz">
+                    <button class="btn-criar-quizz" onclick="chamarTela3()">Criar Quizz</button>
+                </div>
             </div>
-
+            <div class="topo-seus-quizzes">
+                <div class="titulo-seus-quizzes">Seus Quizzes</div>
+                <div>&nbsp &nbsp &nbsp<button class="btn-inserir-quizz" onclick="chamarTela3()">+</button></div>
+                <div class="area-lista-seus-quizzes"></div>
+            </div>
+            <div class="todos-quizzes">
+                <div class="subtitulo-todos-quizzes subtitulo-todos-quizzes-posicao">
+                    Todos os Quizzes
+                </div>
+                <div class="area-lista-quizzes"></div>
+            </div>
         </div> <!-- fim tela1 -->
-        <div class="tela2">
-            tela2
+        
+        
+        <div class="tela2 escondido">
+            tela2            
         </div><!-- fim tela2 -->
-        <div class="tela3">
+        <div class="tela3 escondido">
             tela3
         </div><!-- fim tela3 -->
 
 
-    </div><!-- fim container -->    
-    <script src=".js/main.js"></script>
-    <script src=".js/tela1.js"></script>
+    </div><!-- fim container -->  
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/tela1.js"></script>
     <script src=".js/tela2.js"></script>
+    <script src=".js/tela3.js"></script>
     
 </body>
 </html>
