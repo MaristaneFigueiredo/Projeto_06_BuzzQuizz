@@ -1,0 +1,59 @@
+.tela3-1 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.tela3-1 > p{
+	font-family: 'Roboto';
+	font-weight: 700;
+	font-size: 23px;
+	line-height: 27px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	color: #000000;
+}
+
+.caixaPerguntas{
+	height: 256px;
+	width: 50%;
+}
+
+.caixaPerguntas ul{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.caixaPerguntas ul li{
+	width: 100%;
+	height: 100%;
+}
+
+.caixaPerguntas ul input{
+	width: 100%;
+	height: 46px;
+	border-radius: 10px;
+	border-color: #6e6e6e28;
+}
+
+.prosseguir{
+	width: 30%;
+	height: 54px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 20px;
+	background-color: #EC362D;
+	margin-top: 100px;
+}
+
+.prosseguir p{
+	color: #FFF5F4;
+	font-size: 21px;
+	line-height: 25px;
+	font-family: 'Roboto';
+}

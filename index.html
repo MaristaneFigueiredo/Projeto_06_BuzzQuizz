@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/tela1.css">
+    <link rel="stylesheet" href="./css/tela2.css">
+    <link rel="stylesheet" href="./css/tela3.css">
     <title>BuzzQuizz</title>
 </head>
 <body>
@@ -45,8 +47,28 @@
         <div class="tela2 escondido">
             tela2            
         </div><!-- fim tela2 -->
-        <div class="tela3 escondido">
-            tela3
+        <div class="tela3-1 escondido">
+            <p>Comece pelo começo</p>
+
+            <div class="caixaPerguntas">
+                <ul class="listaPerguntas">
+                    <li>
+                        <input type="text" minlength="20" maxlength="65" placeholder="Título do seu Quizz" autofocus required>
+                    </li>
+                    <li>
+                        <input type='url' placeholder="URL da imagem do seu Quizz" required>
+                    </li>
+                    <li>
+                        <input type='number' placeholder="Quantidade de perguntas do seu Quizz" min="3" required>
+                    </li>
+                    <li>
+                        <input type='number' placeholder="Quantidade de níveis do seu Quizz" min="2" required>
+                    </li>
+                </ul>
+            </div>
+            <div class="prosseguir">
+                <p>Prosseguir para criar perguntas</p>
+            </div>
         </div><!-- fim tela3 -->
 
 
