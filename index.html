@@ -47,29 +47,58 @@
         <div class="tela2 escondido">
             tela2            
         </div><!-- fim tela2 -->
+
+
         <div class="tela3-1 escondido">
             <p>Comece pelo começo</p>
 
             <div class="caixaPerguntas">
                 <ul class="listaPerguntas">
                     <li>
-                        <input type="text" minlength="20" maxlength="65" placeholder="Título do seu Quizz" autofocus required>
+                        <input type="text" id="titulo" minlength="20" maxlength="65" placeholder="Título do seu Quizz" autofocus required>
                     </li>
                     <li>
-                        <input type='url' placeholder="URL da imagem do seu Quizz" required>
+                        <input type='url' id="url" placeholder="URL da imagem do seu Quizz" required>
                     </li>
                     <li>
-                        <input type='number' placeholder="Quantidade de perguntas do seu Quizz" min="3" required>
+                        <input type='number' id="quantidadePerguntas" placeholder="Quantidade de perguntas do seu Quizz" min="3" value="" required>
                     </li>
                     <li>
-                        <input type='number' placeholder="Quantidade de níveis do seu Quizz" min="2" required>
+                        <input type='number' id="quantidadeNiveis" placeholder="Quantidade de níveis do seu Quizz" min="2" required>
                     </li>
                 </ul>
             </div>
-            <div class="prosseguir">
+            <div class="prosseguir" onclick="prosseguir()">
                 <p>Prosseguir para criar perguntas</p>
             </div>
-        </div><!-- fim tela3 -->
+        </div><!-- fim tela3-1 -->
+        <!--Inicio tela3-2-->
+        <div class="tela3-2 escondido">
+            <p>Crie suas perguntas</p>
+            <div class="formulario">
+                <div class="pergunta1">
+                    <h3>Pergunta 3</h3>
+                    <input type="text" placeholder='Texto da pergunta' required>
+                    <input type="text" placeholder="Cor de fundo da pergunta" required>
+                    <h3>Resposta correta</h3>
+                    <input type="text" placeholder="Resposta correta" required>
+                    <input type="url" placeholder="URL da imagem" required>
+                    <h3>Respostas incorretas</h3>
+                    <div class="respostaErrada">
+                        <input type="text" placeholder="Resposta incorreta 1" required>
+                        <input type="url" placeholder="URL da imagem" required>
+                    </div>
+                    <div class="respostaErrada">
+                        <input type="text" placeholder="Resposta incorreta 2" required>
+                        <input type="url" placeholder="URL da imagem" required>
+                    </div>
+                    <div class="respostaErrada">
+                        <input type="text" placeholder="Resposta incorreta 3" required>
+                        <input type="url" placeholder="URL da imagem" required>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
     </div><!-- fim container -->  
@@ -77,8 +106,8 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/tela1.js"></script>
-    <script src=".js/tela2.js"></script>
-    <script src=".js/tela3.js"></script>
+    <script src="./js/tela2.js"></script>
+    <script src="./js/tela3.js"></script>
     
 </body>
 </html>

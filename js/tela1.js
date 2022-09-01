@@ -1,16 +1,16 @@
 function chamarTela3() {
     console.log('entrou na função chamarTela3')
-    alternar('tela1', false);
-    alternar('tela2', false);
-    alternar('tela3', true);
+    alternar('.tela1', false);
+    alternar('.tela2', false);
+    alternar('.tela3-1', true);
 
 }
 
 function chamarTela2() {
     console.log('entrou na função chamarTela2')
-    alternar('tela1', false)
-    alternar('tela2', true)
-    alternar('tela3', false)
+    alternar('.tela1', false)
+    alternar('.tela2', true)
+    alternar('.tela3-1', false)
 }
 
 

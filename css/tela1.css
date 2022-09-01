@@ -9,9 +9,6 @@ body{
     margin-right: 20%;
 }
 
-
-
-
 .btn-criar-quizz {
     border: 1px dashed #EC362D;
     border-radius: 50px;
@@ -61,7 +58,7 @@ body{
 }
 
 .escondido {
-    display: none;
+    display: none !important;
 }
 
 
@@ -103,9 +100,6 @@ body{
     flex-direction: column; 
     justify-content: center;
     align-items: center;
-
-    
-
 }
 
 .area-criar-quizz p:nth-child(1) {        
@@ -136,7 +130,6 @@ body{
 
     flex-wrap: wrap;
     
-
 }
 
 .topo-seus-quizzes {
