@@ -76,11 +76,11 @@
         <div class="tela3-2 escondido">
             <p>Crie suas perguntas</p>
             <div class="formulario">
-                <div class="pergunta1">
+                <div class="pergunta1 opcoesEscondidas1">
                     <h3>Pergunta 1</h3>
 
-                    <input type="text" placeholder='Texto da pergunta' required>
-                    <input type="text" placeholder="Cor de fundo da pergunta" required>
+                    <input type="text" placeholder='Texto da pergunta' class='textoPergunta1' required>
+                    <input type="text" placeholder="Cor de fundo da pergunta" lass='corPergunta1' required>
                     <h3>Resposta correta</h3>
 
                     <input type="text" placeholder="Resposta correta" required>
@@ -88,27 +88,28 @@
                     <h3>Respostas incorretas</h3>
 
                     <div class="respostaErrada">
-                        <input type="text" placeholder="Resposta incorreta 1" required>
-                        <input type="url" placeholder="URL da imagem" required>
+                        <input type="text" placeholder="Resposta incorreta 1" class='textoIncorreto1' required>
+                        <input type="url" placeholder="URL da imagem" class='UrlPrimeiraIncorreta1' required>
                     </div>
 
                     <div class="respostaErrada">
-                        <input type="text" placeholder="Resposta incorreta 2" required>
-                        <input type="url" placeholder="URL da imagem" required>
+                        <input type="text" placeholder="Resposta incorreta 2" class='textoIncorreto2' required>
+                        <input type="url" placeholder="URL da imagem" class='UrlPrimeiraIncorreta2' required>
                     </div>
 
                     <div class="respostaErrada">
-                        <input type="text" placeholder="Resposta incorreta 3" required>
-                        <input type="url" placeholder="URL da imagem" required>
+                        <input type="text" placeholder="Resposta incorreta 3" class='textoIncorreto3' required>
+                        <input type="url" placeholder="URL da imagem" class='UrlPrimeiraIncorreta3' required>
                     </div>
                     </div>
                 <div class="pergunta2">
-                    <div class='titulo'><h4>Pergunta 2</h4>
-                    <img src="./imagens/Vector.png" alt='Botão para abrir a aba' width="26" height="26" onclick="aparecerFormulario(this)">
-                </div>
-                    <div class="opcoesEscondidas escondido">
-                        <input type="text" placeholder='Texto da pergunta' required>
-                        <input type="text" placeholder="Cor de fundo da pergunta" required>
+                    <div class='titulo'>
+                        <h4>Pergunta 2</h4>
+                        <img src="./imagens/Vector.png" alt='Botão para abrir a aba' width="26" height="26" onclick="aparecerFormulario(this)">
+                    </div>
+                    <div class="opcoesEscondidas2 escondido">
+                        <input type="text" placeholder='Texto da pergunta' class='textoPergunta2' required>
+                        <input type="text" placeholder="Cor de fundo da pergunta" lass='corPergunta2' required>
                         <h3>Resposta correta</h3>
 
                         <input type="text" placeholder="Resposta correta" required>
@@ -116,18 +117,18 @@
                         <h3>Respostas incorretas</h3>
 
                         <div class="respostaErrada">
-                            <input type="text" placeholder="Resposta incorreta 1" required>
-                            <input type="url" placeholder="URL da imagem" required>
+                            <input type="text" placeholder="Resposta incorreta 1" class='textoIncorreto1' required>
+                            <input type="url" placeholder="URL da imagem" class='UrlPrimeiraIncorreta1' required>
                         </div>
-
+    
                         <div class="respostaErrada">
-                            <input type="text" placeholder="Resposta incorreta 2" required>
-                            <input type="url" placeholder="URL da imagem" required>
+                            <input type="text" placeholder="Resposta incorreta 2" class='textoIncorreto2' required>
+                            <input type="url" placeholder="URL da imagem" class='UrlPrimeiraIncorreta2' required>
                         </div>
-
+    
                         <div class="respostaErrada">
-                            <input type="text" placeholder="Resposta incorreta 3" required>
-                            <input type="url" placeholder="URL da imagem" required>
+                            <input type="text" placeholder="Resposta incorreta 3" class='textoIncorreto3' required>
+                            <input type="url" placeholder="URL da imagem" class='UrlPrimeiraIncorreta3' required>
                         </div>
                     </div>
                 </div>
