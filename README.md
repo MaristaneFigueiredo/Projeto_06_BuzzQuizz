@@ -1,4 +1,4 @@
-# Projeto_06_BuzzQuizz
+# Projeto 06 - BuzzQuizz
 
 Esse projeto foi feito em colaboração entre Maristane Figueireido e João Paulo S. Amendola.
 
