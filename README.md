@@ -1,4 +1,16 @@
-# Projeto 06 - BuzzQuizz
+(EN) PROJECT 6 - BUZZQUIZ
+
+This project was made in collaboration between Maristane Figueiredo and João Paulo S. Amendola.
+
+The work consists of a duo project of a site in the BuzzQuizz model, waves the user can participate in existing Quizzes or create their own.
+
+As technologies used were JavaScript, Axios (HTTP client based on Promises to make requests), HTML and CSS.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+(PT-BR) Projeto 06 - BuzzQuizz
 
 Esse projeto foi feito em colaboração entre Maristane Figueiredo e João Paulo S. Amendola.
 
