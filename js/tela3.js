@@ -57,22 +57,22 @@ function criarFormulario(){
             <h3>Resposta correta</h3>
     
             <input type="text" placeholder="Resposta correta" class='respostaCorreta${contador+1}' required>
-            <input type="url" placeholder="URL da imagem" class='UrlPrimeiraIncorreta${contador+1}' required>
+            <input type="url" placeholder="URL da imagem" class='urlPrimeiraIncorreta${contador+1}' required>
             <h3>Respostas incorretas</h3>
     
             <div class="respostaErrada">
                 <input type="text" placeholder="Resposta incorreta 1" class='textoIncorreto${contador+1}' required>
-                <input type="url" placeholder="URL da imagem" class='UrlPrimeiraIncorreta${contador+1}' required>
+                <input type="url" placeholder="URL da imagem" class='urlPrimeiraIncorreta${contador+1}' required>
             </div>
     
             <div class="respostaErrada">
                 <input type="text" placeholder="Resposta incorreta 2" class='textoIncorreto${contador+1}' required>
-                <input type="url" placeholder="URL da imagem" class='UrlPrimeiraIncorreta${contador+1}' required>
+                <input type="url" placeholder="URL da imagem" class='urlPrimeiraIncorreta${contador+1}' required>
             </div>
     
             <div class="respostaErrada">
                 <input type="text" placeholder="Resposta incorreta 3" class='textoIncorreto${contador+1}' required>
-                <input type="url" placeholder="URL da imagem" class='UrlPrimeiraIncorreta${contador+1}' required>
+                <input type="url" placeholder="URL da imagem" class='urlPrimeiraIncorreta${contador+1}' required>
             </div>
     </div>`
     
@@ -93,13 +93,56 @@ function preencherFormulario(){
     objeto.questions =  [
         {
         text: document.querySelector(`.opcoesEscondidas1 .textoPergunta1`).value,
-        image: document.querySelector(`.opcoesEscondidas1 .corPergunta1`).value ,
-        
+        color: document.querySelector(`.opcoesEscondidas1 .corPergunta1`).value,
+        answers: [
+            {
+                title: document.querySelector('.opcoesEscondidas1 respostaCorreta1'),
+                color: document.querySelector('.opcoesEscolhidas1 urlPrimeiraCorreta1'),
+                isCorrectAnswer: true
+            },
+            {
+                title: document.querySelector('.opcoesEscondidas1 respostaIncorreta1'),
+                color: document.querySelector('.opcoesEscolhidas1 urlPrimeiraIncorreta1'),
+                isCorrectAnswer: false
+            },
+            {
+                title: document.querySelector('.opcoesEscondidas1 respostaIncorreta2'),
+                color: document.querySelector('.opcoesEscolhidas1 urlPrimeiraIncorreta2'),
+                isCorrectAnswer: false
+            },
+            {
+                title: document.querySelector('.opcoesEscondidas1 respostaIncorreta3'),
+                color: document.querySelector('.opcoesEscolhidas1 urlPrimeiraIncorreta3'),
+                isCorrectAnswer: false
+            }
+        ]
+    },
+    {
+      text: document.querySelector('.opcoesEscondidas2 .textoPergunta2').value,
+      color: document.querySelector('.opcoesEscolhidas2 .corPergunta2').value,
+      answers: [
+        {
+            title: document.querySelector('.opcoesEscondidas2 respostaCorreta1'),
+            color: document.querySelector('.opcoesEscolhidas2 urlPrimeiraCorreta1'),
+            isCorrectAnswer: true
+        },
+        {
+            title: document.querySelector('.opcoesEscondidas2 respostaIncorreta1'),
+            color: document.querySelector('.opcoesEscolhidas2 urlPrimeiraIncorreta1'),
+            isCorrectAnswer: false
+        },
+        {
+            title: document.querySelector('.opcoesEscondidas2 respostaIncorreta2'),
+            color: document.querySelector('.opcoesEscolhidas2 urlPrimeiraIncorreta2'),
+            isCorrectAnswer: false
+        },
+        {
+            title: document.querySelector('.opcoesEscondidas2 respostaIncorreta3'),
+            color: document.querySelector('.opcoesEscolhidas2 urlPrimeiraIncorreta3'),
+            isCorrectAnswer: false
+        }
+      ]
     }
     ]
-
-<<<<<<< HEAD
+    
 }
-=======
-}
->>>>>>> 4779a5ec5801d20ddd5bef3bb13c4b532696a055
