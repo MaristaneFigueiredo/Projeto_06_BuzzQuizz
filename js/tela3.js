@@ -98,4 +98,8 @@ function preencherFormulario(){
     }
     ]
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 4779a5ec5801d20ddd5bef3bb13c4b532696a055
