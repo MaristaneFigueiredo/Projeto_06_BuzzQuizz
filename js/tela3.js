@@ -51,13 +51,13 @@ function criarFormulario(){
         <div class='titulo'><h4>Pergunta ${contador+1}</h4>
         <img src="./imagens/Vector.png" alt='Botão para abrir a aba' width="26" height="26" onclick="aparecerFormulario(this)">
     </div>
-        <div class="opcoesEscondidas${contador+1} escondido">
+        <div class="opcoesEscondidas${contador+1} escondido obrigatorio">
             <input type="text" placeholder='Texto da pergunta' class='textoPergunta${contador+1}' required>
             <input type="text" placeholder="Cor de fundo da pergunta" class='corPergunta${contador+1}' required>
             <h3>Resposta correta</h3>
     
             <input type="text" placeholder="Resposta correta" class='respostaCorreta${contador+1}' required>
-            <input type="url" placeholder="URL da imagem" class='urlPrimeiraIncorreta${contador+1}' required>
+            <input type="url" placeholder="URL da imagem" class='urlPrimeiraCorreta${contador+1}' required>
             <h3>Respostas incorretas</h3>
     
             <div class="respostaErrada">
@@ -90,59 +90,99 @@ function aparecerFormulario(imagem){
 
 
 function preencherFormulario(){
+    console.log('entrei no preencherform')
     objeto.questions =  [
         {
-        text: document.querySelector(`.opcoesEscondidas1 .textoPergunta1`).value,
+        title: document.querySelector(`.opcoesEscondidas1 .textoPergunta1`).value,
         color: document.querySelector(`.opcoesEscondidas1 .corPergunta1`).value,
         answers: [
             {
-                title: document.querySelector('.opcoesEscondidas1 respostaCorreta1'),
-                color: document.querySelector('.opcoesEscolhidas1 urlPrimeiraCorreta1'),
+                text: document.querySelector('.opcoesEscondidas1 .respostaCorreta1').value,
+                image: document.querySelector('.opcoesEscondidas1 .urlPrimeiraCorreta1').value,   
                 isCorrectAnswer: true
             },
             {
-                title: document.querySelector('.opcoesEscondidas1 respostaIncorreta1'),
-                color: document.querySelector('.opcoesEscolhidas1 urlPrimeiraIncorreta1'),
+                text: document.querySelector('.opcoesEscondidas1 .textoIncorreto1').value,
+                image: document.querySelector('.opcoesEscondidas1 .urlPrimeiraIncorreta1').value,
                 isCorrectAnswer: false
             },
             {
-                title: document.querySelector('.opcoesEscondidas1 respostaIncorreta2'),
-                color: document.querySelector('.opcoesEscolhidas1 urlPrimeiraIncorreta2'),
+                text: document.querySelector('.opcoesEscondidas1 .textoIncorreto2').value,
+                image: document.querySelector('.opcoesEscondidas1 .urlPrimeiraIncorreta2').value,
                 isCorrectAnswer: false
             },
             {
-                title: document.querySelector('.opcoesEscondidas1 respostaIncorreta3'),
-                color: document.querySelector('.opcoesEscolhidas1 urlPrimeiraIncorreta3'),
+                text: document.querySelector('.opcoesEscondidas1 .textoIncorreto3').value,
+                image: document.querySelector('.opcoesEscondidas1 .urlPrimeiraIncorreta3').value,
                 isCorrectAnswer: false
             }
         ]
     },
     {
-      text: document.querySelector('.opcoesEscondidas2 .textoPergunta2').value,
-      color: document.querySelector('.opcoesEscolhidas2 .corPergunta2').value,
+      title: document.querySelector('.opcoesEscondidas2 .textoPergunta2').value,
+      color: document.querySelector('.opcoesEscondidas2 .corPergunta2').value,
       answers: [
         {
-            title: document.querySelector('.opcoesEscondidas2 respostaCorreta1'),
-            color: document.querySelector('.opcoesEscolhidas2 urlPrimeiraCorreta1'),
+            text: document.querySelector('.opcoesEscondidas2 .respostaCorreta1').value,
+            image: document.querySelector('.opcoesEscondidas2 .urlPrimeiraCorreta1').value,
             isCorrectAnswer: true
         },
         {
-            title: document.querySelector('.opcoesEscondidas2 respostaIncorreta1'),
-            color: document.querySelector('.opcoesEscolhidas2 urlPrimeiraIncorreta1'),
+            text: document.querySelector('.opcoesEscondidas2 .textoIncorreto1').value,
+            image: document.querySelector('.opcoesEscondidas2 .urlPrimeiraIncorreta1').value,
             isCorrectAnswer: false
         },
         {
-            title: document.querySelector('.opcoesEscondidas2 respostaIncorreta2'),
-            color: document.querySelector('.opcoesEscolhidas2 urlPrimeiraIncorreta2'),
+            text: document.querySelector('.opcoesEscondidas2 .textoIncorreto2').value,
+            image: document.querySelector('.opcoesEscondidas2 .urlPrimeiraIncorreta2').value,
             isCorrectAnswer: false
         },
         {
-            title: document.querySelector('.opcoesEscondidas2 respostaIncorreta3'),
-            color: document.querySelector('.opcoesEscolhidas2 urlPrimeiraIncorreta3'),
+            text: document.querySelector('.opcoesEscondidas2 .textoIncorreto3').value,
+            image: document.querySelector('.opcoesEscondidas2 .urlPrimeiraIncorreta3').value,
             isCorrectAnswer: false
         }
       ]
     }
     ]
-    
+    let contador = 2
+    while (contador < perguntasQuizz){
+        console.log('entrei no while do preencherform')
+        objeto.questions.push(
+            {
+            title: document.querySelector(`.opcoesEscondidas${contador+1} .textoPergunta${contador+1}`).value,
+            color: document.querySelector(`.opcoesEscondidas${contador+1} .corPergunta${contador+1}`).value,
+            answers: [
+              {
+                  text: document.querySelector(`.opcoesEscondidas${contador+1} .respostaCorreta${contador+1}`).value,
+                  image: document.querySelector(`.opcoesEscondidas${contador+1} .urlPrimeiraCorreta${contador+1}`).value,
+                  isCorrectAnswer: true
+              },
+              {
+                  text: document.querySelector(`.opcoesEscondidas${contador+1} .textoIncorreto${contador+1}`).value,
+                  image: document.querySelector(`.opcoesEscondidas${contador+1} .urlPrimeiraIncorreta${contador+1}`).value,
+                  isCorrectAnswer: false
+              },
+              {
+                  text: document.querySelector(`.opcoesEscondidas${contador+1} .textoIncorreto${contador+1}`).value,
+                  image: document.querySelector(`.opcoesEscondidas${contador+1} .urlPrimeiraIncorreta${contador+1}`).value,
+                  isCorrectAnswer: false
+              },
+              {
+                  text: document.querySelector(`.opcoesEscondidas${contador+1} .textoIncorreto${contador+1}`).value,
+                  image: document.querySelector(`.opcoesEscondidas${contador+1} .urlPrimeiraIncorreta${contador+1}`).value,
+                  isCorrectAnswer: false
+              }
+            ]
+          }
+        
+        )
+        contador += 1
+    }
+}
+
+function esconderTela3_2(){
+    let tela3_2 = document.querySelector('.tela3-2')
+    tela3_2.classList.add('escondido')
+    tela3_3.classList.remove('escondido')
 }
