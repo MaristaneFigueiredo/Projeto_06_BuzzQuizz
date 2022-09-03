@@ -191,3 +191,63 @@ h4{
 	justify-content: center;
 	color: #FFF5F4;
 }
+
+.tabelaNiveis{
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.tela3-3 h4{
+	margin-top: 100px;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+
+.referenciaNiveis{
+	margin: 0 auto;
+	background-color: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 70%;
+	position: relative;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #FFF5F4;
+	box-shadow: 0 0 2px rgb(184, 184, 184);
+	margin-bottom: 30px;
+	padding-bottom: 20px;
+}
+
+.referenciaNiveis h4{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.referenciaNiveis h4{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.finalizarQuizz{
+	margin: 0 auto;
+	margin-bottom: 300px;
+	width: 350px;
+	height: 54px;
+	border-radius: 15px;
+	background-color: #EC362D;
+	font-family: 'Roboto';
+	font-weight: 400;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

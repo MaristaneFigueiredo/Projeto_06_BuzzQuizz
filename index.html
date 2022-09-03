@@ -53,7 +53,7 @@
         </div><!-- fim tela2 -->
 
 
-        <div class="tela3-1">
+        <div class="tela3-1 escondido">
             <p>Comece pelo começo</p>
 
             <div class="caixaPerguntas">
@@ -141,20 +141,35 @@
                 <div><p>Prosseguir para criar níveis</p></div>
             </div>
         </div>
-        <div class="tela3-3">
+        <div class="tela3-3 escondido">
             <h4>Agora, decida os níveis</h4>
             <div class="tabelaNiveis">
-                <div class="nivel1">
+                <div class="nivel1 referenciaNiveis">
                     <h4>Nível 1</h4>
-                    <input type="text" placeholder="Título do nível" required>
-                    <input type="number" placeholder="Porcentagem de acerto mínima" required>
-                    <input type="url" placeholder="URL da imagem do nível" required>
-                    <input type="text" placeholder="Descrição do nível" required>
-
+                    <input type="text" placeholder="Título do nível" class='tituloNivel1'  required>
+                    <input type="number" placeholder="Porcentagem de acerto mínima" class='porcentagemNivel1' required>
+                    <input type="url" placeholder="URL da imagem do nível" class='urlNivel1' required>
+                    <input type="text" placeholder="Descrição do nível" class='descricaoNivel1' required>
+                </div>
+                <div class="nivel2 referenciaNiveis">
+                    <h4>Nível 2</h4>
+                    <input type="text" placeholder="Título do nível" class='tituloNivel2' required>
+                    <input type="number" placeholder="Porcentagem de acerto mínima" class='porcentagemNivel2' required>
+                    <input type="url" placeholder="URL da imagem do nível" class='urlNivel2' required>
+                    <input type="text" placeholder="Descrição do nível" class='descricaoNivel2' required>
                 </div>
             </div>
+            <div class="finalizarQuizz" onclick="preencherNiveis() ,esconderTela3_3()">
+                <p>finalizarQuizz</p>
+            </div>
         </div>
-
+        <div class="tela3-4 escondido">
+            <h4>Seu quizz está pronto!</h4>
+            <img>
+            <div><p>Acessar Quizz</p>
+            </div>
+            <p>Voltar pra home</p>
+        </div>
 
     </div><!-- fim container -->  
     
