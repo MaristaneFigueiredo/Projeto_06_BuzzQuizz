@@ -6,6 +6,7 @@ function chamarTela3() {
 
 }
 
+
 function chamarTela2() {
     console.log('entrou na função chamarTela2')
     alternar('.tela1', false)

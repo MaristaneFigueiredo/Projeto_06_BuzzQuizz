@@ -253,11 +253,34 @@ function esconderTela3_3(resposta){
     tela3_3.classList.add('escondido')
     tela3_4.classList.remove('escondido')
 
+    //armazenarQuizzDoUsuario(id)
+
     tela3_4.innerHTML = 
     `<h4>Seu quizz está pronto!</h4>
      <img src="${fotoDoQuizz}" alt ="foto do quizz">
      <div class='botaoAcessar'>Acessar Quizz
      </div>
-     <p>Voltar pra home</p>`
+     <p onclick='chamarTela1()'>Voltar pra home</p>`
     
 }
+
+function chamarTela1() {
+    console.log('entrou na função chamarTela3')
+    alternar('.tela1', true);
+    alternar('.tela2', false);
+    alternar('.tela3-1', false);
+    alternar('.tela3-4', false)
+
+}
+
+
+/*function armazenarQuizzDoUsuario(id)
+{
+    const objetoquizz = JSON.stringify(id)
+    
+    let arrayDeQuizzes = JSON.parse(localStorage.getItem('user-quizzes')) 
+    arrayDeQuizzes.push(id)
+    console.log('arrayDeQuizzes', arrayDeQuizzes);
+    
+    localStorage.setItem('user-quizzes', JSON.stringify(arrayDeQuizzes))
+} */
