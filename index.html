@@ -57,19 +57,19 @@
             <p>Comece pelo começo</p>
 
             <div class="caixaPerguntas">
-                <ul class="listaPerguntas">
-                    <li>
-                        <input type="text" id="titulo" minlength="20" maxlength="65" placeholder="Título do seu Quizz" autofocus required>
-                    </li>
-                    <li>
-                        <input type='url' id="url" placeholder="URL da imagem do seu Quizz" required>
-                    </li>
-                    <li>
-                        <input type='number' id="quantidadePerguntas" placeholder="Quantidade de perguntas do seu Quizz" min="3" value="" required>
-                    </li>
-                    <li>
-                        <input type='number' id="quantidadeNiveis" placeholder="Quantidade de níveis do seu Quizz" min="2" required>
-                    </li>
+                    <ul class="listaPerguntas">
+                        <li>
+                            <input type="text" id="titulo" minlength="20" maxlength="65" placeholder="Título do seu Quizz" autofocus required>
+                        </li>
+                        <li>
+                            <input type='url' id="url" placeholder="URL da imagem do seu Quizz" required>
+                        </li>
+                        <li>
+                            <input type='number' id="quantidadePerguntas" placeholder="Quantidade de perguntas do seu Quizz" min="3" value="" required>
+                        </li>
+                        <li>
+                            <input type='number' id="quantidadeNiveis" placeholder="Quantidade de níveis do seu Quizz" min="2" required>
+                        </li>
                 </ul>
             </div>
             <div class="prosseguir" onclick="prosseguir()">
@@ -82,7 +82,6 @@
             <div class="formulario">
                 <div class="pergunta1 opcoesEscondidas1">
                     <h3>Pergunta 1</h3>
-
                     <input type="text" placeholder='Texto da pergunta' class='textoPergunta1' required>
                     <input type="text" placeholder="Cor de fundo da pergunta" class='corPergunta1' required>
                     <h3>Resposta correta</h3>
@@ -159,16 +158,11 @@
                     <input type="text" placeholder="Descrição do nível" class='descricaoNivel2' required>
                 </div>
             </div>
-            <div class="finalizarQuizz" onclick="preencherNiveis() ,esconderTela3_3()">
+            <div class="finalizarQuizz" onclick="preencherNiveis() ,postAPI()">
                 <p>finalizarQuizz</p>
             </div>
         </div>
-        <div class="tela3-4 escondido">
-            <h4>Seu quizz está pronto!</h4>
-            <img>
-            <div><p>Acessar Quizz</p>
-            </div>
-            <p>Voltar pra home</p>
+        <div class="tela3-4">
         </div>
 
     </div><!-- fim container -->  

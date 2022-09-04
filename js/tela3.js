@@ -5,6 +5,7 @@ let niveisQuizz = document.getElementById('quantidadeNiveis')
 
 let tela3_1 = document.querySelector('.tela3-1') 
 let tela3_2 = document.querySelector('.tela3-2')
+let tela3_4 = document.querySelector('.tela3-4')
 let formulario = document.querySelector('.formulario')
 let contador = 2
 let contadorPerguntas = 1
@@ -87,6 +88,7 @@ function aparecerFormulario(imagem){
     divEscondida = divAvo.children[1]
     divEscondida.classList.toggle('escondido')
     console.log(imagem, divPai, divAvo, divEscondida)
+
 }
 
 
@@ -236,7 +238,26 @@ function preencherNiveis(){
 } 
 }
 
-function esconderTela3_3(){
+function postAPI(){
+    axios.post('https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes', objeto)
+         .then(esconderTela3_3)
+         .catch()
+}
+
+function esconderTela3_3(resposta){
+    let id = resposta.data.id
+    console.log(id)
     let tela3_3 = document.querySelector('.tela3-3')
     let tela3_4 = document.querySelector('.tela3-4')
+
+    tela3_3.classList.add('escondido')
+    tela3_4.classList.remove('escondido')
+
+    tela3_4.innerHTML = 
+    `<h4>Seu quizz está pronto!</h4>
+     <img src="${fotoDoQuizz}" alt ="foto do quizz">
+     <div class='botaoAcessar'>Acessar Quizz
+     </div>
+     <p>Voltar pra home</p>`
+    
 }
