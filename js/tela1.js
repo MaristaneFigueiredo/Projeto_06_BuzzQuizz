@@ -1,11 +1,10 @@
 function chamarTela3() {
     console.log('entrou na função chamarTela3')
-    alternar('.tela1', false);
-    alternar('.tela2', false);
-    alternar('.tela3-1', true);
+    alternar('.tela1', false)
+    alternar('.tela2', false)
+    alternar('.tela3-1', true)
 
 }
-
 
 function chamarTela2() {
     console.log('entrou na função chamarTela2')
@@ -14,6 +13,18 @@ function chamarTela2() {
     alternar('.tela3-1', false)
 }
 
+function salvarQuizz()
+{
+    const quizz = []
+    const objetoquizz = JSON.stringify(quizz)
+
+    localStorage.setItem('user-quizzes', objetoquizz)
+
+}
+
+salvarQuizz();
+
+
 iniciarBuzzQuizz();
 
 function verificarQuizzesDoUsuario()
@@ -21,16 +32,19 @@ function verificarQuizzesDoUsuario()
     const haQuizzesDoUsuario = (JSON.parse(localStorage.getItem('user-quizzes'))).length > 0
     const areaCriarQuizz = document.querySelector('.criar-quizz')
     const areaQuizzesDoUsuario = document.querySelector('.area-seus-quizzes')
+    
 
     console.log('haQuizzesDoUsuario =', haQuizzesDoUsuario)
     console.log('areaQuizzesDoUsuario =', areaQuizzesDoUsuario)
     if (haQuizzesDoUsuario) {
         areaCriarQuizz.classList.add('escondido')
         areaQuizzesDoUsuario.classList.remove('escondido')
+        
     }
     else {
         areaCriarQuizz.classList.remove('escondido')
         areaQuizzesDoUsuario.classList.add('escondido')
+        
     }
 }
 
@@ -54,14 +68,14 @@ function selecionaQuizz(idQuizz) {
 async function obterQuizzSelecionado(idQuizz) {
     const { data } = await axios.get(`https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes/${idQuizz}`)
     console.log('quiz selecionado =', data)
-    exibeQuizzSelecionado(data)
+    // exibeQuizzSelecionado(data)
 
 }
 
-function exibeQuizzSelecionado(quizz) {
-    document.querySelector('.imagem-quizz-selecionado').setAttribute("src", quizz.image)
+// function exibeQuizzSelecionado(quizz) {
+//     document.querySelector('.imagem-quizz-selecionado').setAttribute("src", quizz.image)
 
-}
+// }
 
 
 
@@ -89,19 +103,16 @@ function ehQuizzDoUsuario(id) {
 }
 
 function imprimirQuizes(quizzes) {
+    console.log('imprimirQuizes- quizzes', quizzes)
+    
     const areaTodosQuizzes = document.querySelector('.todos-quizzes > .area-lista-quizzes')
     const areaQuizzesUsuario = document.querySelector('.area-lista-seus-quizzes')
     let html = ''
     for (let i = 0; i < quizzes.length; i++) {
         
         let QuizzDoUsuario = ehQuizzDoUsuario(quizzes[i].id)
+        console.log('QuizzDoUsuario', QuizzDoUsuario)
 
-        // console.log('quizzes[i] =',quizzes[i].title)
-
-        // html = `<div class="quizz" onclick="">
-        //             <img class= "formatar-imagem-quizz" src="${quizzes[i].image}" onclick="selecionaQuizz(${quizzes[i].id})">
-        //             <div class="titulo-quizz"> ${quizzes[i].title}</div>
-        //     </div>`
 
         html = `<div class="quizz" onclick="">
                     <div class="tamanho-imagem-quizz">
@@ -111,23 +122,16 @@ function imprimirQuizes(quizzes) {
                 </div>`
 
 
-
-
-        // <div class="configuracao-imagem">
-        //                    <div class="imagem-tamanho"><img class = "efeito-esbranquicado"src="./imagens/gato.png"></div>
-        //                    <div class="titulo-imagem">Gatíneo</div>
-        //                </div>
-
-
-
         if(QuizzDoUsuario) {
+            console.log('QuizzDoUsuario -if', QuizzDoUsuario)
             areaQuizzesUsuario.innerHTML += html
         }
         else {
+            console.log('QuizzDoUsuario -else', QuizzDoUsuario)            
             areaTodosQuizzes.innerHTML += html
 
         }
-        //${quizzes[i].id}
+
     }
 
 

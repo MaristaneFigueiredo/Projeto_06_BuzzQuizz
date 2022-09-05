@@ -214,11 +214,7 @@ body{
 
     }
 
-    /* .todos-quizzes {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    } */
+
 
 
     .subtitulo-todos-quizzes-posicao {
@@ -228,9 +224,7 @@ body{
     .area-lista-quizzes{
         display: flex;
         flex-direction: column;
-        /* justify-content: stretch; */
-        /* align-items: stretch; */
-        /* flex-wrap: wrap; */
+      
         margin-top: 15px;
     
     }
@@ -239,26 +233,7 @@ body{
 
     
 
-    /* .area-criar-quizz {
-        
-        height: 181px;
-        border: 1px dashed #D5D5D5;
-        border-radius: 5px;
-        box-sizing: border-box;
-        margin-top: 31px;
-        text-align: center;
-        padding: 50px;
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        color: #B9B9B9;
-        display: flex;
-        flex-direction: column; 
-        justify-content: center;
-        align-items: center;
 
-    } */
   
 
 
