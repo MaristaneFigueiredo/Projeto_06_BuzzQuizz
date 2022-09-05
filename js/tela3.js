@@ -253,7 +253,7 @@ function esconderTela3_3(resposta){
     tela3_3.classList.add('escondido')
     tela3_4.classList.remove('escondido')
 
-    //armazenarQuizzDoUsuario(id)
+    armazenarQuizzDoUsuario(id)
 
     tela3_4.innerHTML = 
     `<h4>Seu quizz está pronto!</h4>
@@ -265,22 +265,25 @@ function esconderTela3_3(resposta){
 }
 
 function chamarTela1() {
-    console.log('entrou na função chamarTela3')
+    console.log('entrou na função chamarTela1')
     alternar('.tela1', true);
     alternar('.tela2', false);
     alternar('.tela3-1', false);
     alternar('.tela3-4', false)
+    iniciarBuzzQuizz(); /*O código dessa rotina está na tela1. É necessário chamá-la aqui, pois atualiza os quizzes do próprio usuário e todos na tela 1 */
 
 }
 
 
-/*function armazenarQuizzDoUsuario(id)
+
+
+
+
+function armazenarQuizzDoUsuario(id)
 {
-    const objetoquizz = JSON.stringify(id)
-    
     let arrayDeQuizzes = JSON.parse(localStorage.getItem('user-quizzes')) 
     arrayDeQuizzes.push(id)
     console.log('arrayDeQuizzes', arrayDeQuizzes);
     
     localStorage.setItem('user-quizzes', JSON.stringify(arrayDeQuizzes))
-} */
+} 
